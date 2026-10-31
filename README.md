@@ -59,23 +59,23 @@ The methods are compared using the same physical model and initial conditions wh
 
 The swept area over a short timestep is approximated using the triangle formed by the Sun and the planet’s positions at successive timesteps:
 
-\[
+$$
 \Delta A \approx \frac{1}{2}
 \left|x_i y_{i+1}-y_i x_{i+1}\right|.
-\]
+$$
 
 The corresponding approximate areal velocity is
 
-\[
+$$
 K_i=\frac{\Delta A}{\Delta t}.
-\]
+$$
 
 If Kepler’s second law is satisfied, the areal velocity should remain approximately constant. The simulated values are examined over time and compared with the theoretical areal velocity for an elliptical orbit:
 
-\[
+$$
 K_{\mathrm{theory}}=
 \frac{1}{2}\sqrt{\mu a(1-e^2)},
-\]
+$$
 
 where \(a\) is the semi-major axis and \(e\) is the orbital eccentricity.
 
@@ -87,13 +87,13 @@ The initial position and velocity are taken from the reference state at the chos
 
 The position error is calculated as
 
-\[
+$$
 \text{Position Error (\%)}=
 \frac{\left|\mathbf r_{\mathrm{sim}}-\mathbf r_{\mathrm{ref}}\right|}
 {\left|\mathbf r_{\mathrm{ref}}\right|}\times100.
-\]
+$$
 
-Here, \(\mathbf r_{\mathrm{sim}}\) and \(\mathbf r_{\mathrm{ref}}\) are the simulated and reference position vectors, respectively.
+Here, $\(\mathbf r_{\mathrm{sim}}\) and \(\mathbf r_{\mathrm{ref}}\)$ are the simulated and reference position vectors, respectively.
 
 The reference epoch, time interval, coordinate conventions and numerical error metrics should be specified alongside the results to make the comparison reproducible.
 
