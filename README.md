@@ -105,26 +105,60 @@ The analysis focuses on three aspects:
 2. **Timestep dependence:** Simulations with different timesteps are compared to investigate how the timestep affects numerical accuracy.
 3. **Integration-method comparison:** Euler, RK4 and Velocity Verlet are compared using the same clearly defined error metrics.
 
-### Selected Figures
-
-Add your actual generated plots here:
-
-- `plots/orbit.png` — Simulated orbital trajectory.
-- `plots/areal_velocity.png` — Areal velocity as a function of time.
-- `plots/position_error.png` — Position error relative to JPL reference data.
-- `plots/timestep_comparison.png` — Numerical error for different timesteps or integration methods.
-
-Only include figures that you have generated and verified.
-
 ### Quantitative Results
 
-Record the actual results from your simulation, including:
-- The timestep used for each run.
-- The maximum or final position error over the specified interval.
-- The metric used to assess areal-velocity variation.
-- The integration method used for each comparison.
+### Verification of Kepler's Second Law
 
-Do not compare results using different error definitions or validation intervals without explicitly stating the differences.
+The numerical areal velocity was compared with its theoretical value to examine the conservation of areal velocity throughout the orbit.
+
+| Parameter | Result |
+|---|---:|
+| Selected timestep | $1 \times 10^{-6}$ years |
+| Mean numerical areal velocity | 3.07818418 AU²/year |
+| Theoretical areal velocity | 3.07811959 AU²/year |
+| Maximum variation in areal velocity | 0.002098% |
+| Error from theoretical value | 0.002098% |
+
+The numerical result closely agrees with the theoretical value, supporting the verification of Kepler's Second Law.
+
+### Timestep Analysis
+
+The effect of timestep size on numerical accuracy was investigated by comparing the mean areal velocity obtained at different timesteps.
+
+| Timestep (years) | Mean areal velocity (AU²/year) | Change from previous timestep (%) |
+|---:|---:|---:|
+| $10^{-3}$ | 3.13880460 | 6.035032 |
+| $10^{-4}$ | 3.08453423 | 0.798489 |
+| $10^{-5}$ | 3.07876510 | 0.083502 |
+| $10^{-6}$ | 3.07818418 | 0.008390 |
+
+The results show that reducing the timestep improves numerical accuracy and brings the calculated areal velocity closer to its theoretical value.
+
+### Comparison of Numerical Integration Methods
+
+Euler, fourth-order Runge–Kutta (RK4), and Velocity Verlet methods were compared using position and energy errors.
+
+| Integration Method | Maximum Position Error (%) | Final Position Error (%) | Maximum Energy Error (%) |
+|---|---:|---:|---:|
+| Euler | 0.064760 | 0.064760 | 0.008917 |
+| RK4 | 0.000000 | 0.000000 | 0.000000 |
+| Velocity Verlet | 0.000000 | 0.000000 | 0.000000 |
+
+*Note: RK4 and Velocity Verlet errors are rounded to six decimal places.*
+
+### Validation Using NASA/JPL Horizons Data
+
+The simulated Earth trajectory was compared with reference ephemeris data obtained from NASA/JPL Horizons.
+
+| Parameter | Result |
+|---|---:|
+| Integration method | Euler |
+| Timestep | $10^{-6}$ years |
+| Validation period | 360 days |
+| Final position error | 11.650035% |
+| Final radial error | 0.007723% |
+
+The difference between the final position error and radial error indicates that the simulation can reproduce the orbital radius more accurately than the full position vector over the validation period. This highlights the limitations of explicit Euler integration over longer simulations.
 
 ## Limitations
 
