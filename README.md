@@ -8,7 +8,7 @@ Kepler’s second law states that the line joining a planet and the Sun sweeps o
 
 ## Physical Model
 
-The planet is modelled as a body moving under the gravitational attraction of the Sun. The Sun is assumed to remain fixed at the origin, and the planet’s motion is treated as a two-dimensional problem.
+The planet is modelled as a body moving under the gravitational attraction of the Sun. The Sun is assumed to remain fixed at the origin, and the planet’s motion is treated as a two dimensional problem.
 
 Using Newton’s law of gravitation, the equations of motion are
 
@@ -45,13 +45,13 @@ Three numerical integration methods are investigated.
 
 Euler’s method updates position and velocity using the current velocity and acceleration. It is simple to implement, but its errors can accumulate over time and affect the simulated orbit.
 
-### 2. Fourth-Order Runge–Kutta (RK4)
+### 2. Runge – Kutta (RK4)
 
 RK4 evaluates the system at multiple intermediate points during each timestep to obtain a more accurate update. It generally achieves higher accuracy than basic Euler integration for a sufficiently small timestep.
 
 ### 3. Velocity Verlet
 
-Velocity Verlet updates position and velocity using the acceleration at the current and subsequent positions. It is commonly used in mechanics simulations because of its favourable long-term energy behaviour for suitable conservative systems.
+Velocity Verlet updates position and velocity using the acceleration at the current and subsequent positions. It is commonly used in mechanics simulations because of its favourable long term energy behaviour for suitable conservative systems.
 
 The methods are compared using the same physical model and initial conditions wherever applicable.
 
@@ -81,7 +81,7 @@ where \(a\) is the semi-major axis and \(e\) is the orbital eccentricity.
 
 ## Validation Against JPL Reference Data
 
-The Earth-orbit simulation is also compared with reference state data from NASA/JPL Horizons.
+The Earth orbit simulation is also compared with reference state data from NASA/JPL Horizons.
 
 The initial position and velocity are taken from the reference state at the chosen epoch. The simulated trajectory is then compared with the reference trajectory over the selected validation interval.
 
@@ -136,7 +136,7 @@ The results show that reducing the timestep improves numerical accuracy and brin
 
 ### Comparison of Numerical Integration Methods
 
-Euler, fourth-order Runge–Kutta (RK4), and Velocity Verlet methods were compared using position and energy errors.
+Euler, Runge–Kutta (RK4), and Velocity Verlet methods were compared using position and energy errors.
 
 | Integration Method | Maximum Position Error (%) | Final Position Error (%) | Maximum Energy Error (%) |
 |---|---:|---:|---:|
@@ -162,11 +162,11 @@ The difference between the final position error and radial error indicates that 
 
 ## Limitations
 
-The simulation uses a simplified two-body model and therefore does not account for perturbations from other planets or other effects included in high-precision orbital calculations.
+The simulation uses a simplified two-body model and therefore does not account for perturbations from other planets or other effects included in high precision orbital calculations.
 
 Numerical accuracy depends on the timestep and integration method. A smaller timestep can reduce discretisation error, but it increases computational cost and does not eliminate all modelling or numerical errors.
 
-The swept-area calculation is also an approximation over a finite timestep. Consequently, the measured areal velocity can vary slightly even when the underlying continuous physical model conserves angular momentum.
+The swept area calculation is also an approximation over a finite timestep. Consequently, the measured areal velocity can vary slightly even when the underlying continuous physical model conserves angular momentum.
 
 ## Conclusion
 
@@ -177,7 +177,6 @@ This project uses numerical integration to investigate Kepler’s second law and
 - Python
 - NumPy
 - Matplotlib
-- Google Colab
 - NASA/JPL Horizons reference data
 
 ## Reproducibility
