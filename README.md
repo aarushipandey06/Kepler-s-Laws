@@ -125,12 +125,17 @@ The numerical result closely agrees with the theoretical value, supporting the v
 
 The effect of timestep size on numerical accuracy was investigated by comparing the mean areal velocity obtained at different timesteps.
 
-| Timestep (years) | Mean areal velocity (AU²/year) | Change from previous timestep (%) |
+| Timestep (years) | Mean Areal Velocity (AU²/year) | Change from Previous Timestep (%) |
 |---:|---:|---:|
-| $10^{-3}$ | 3.13880460 | 6.035032 |
-| $10^{-4}$ | 3.08453423 | 0.798489 |
-| $10^{-5}$ | 3.07876510 | 0.083502 |
-| $10^{-6}$ | 3.07818418 | 0.008390 |
+| $1.0\times10^{-2}$ | 3.55708214 | — |
+| $5.0\times10^{-3}$ | 3.34039875 | 6.091605 |
+| $1.0\times10^{-3}$ | 3.13880460 | 6.035032 |
+| $5.0\times10^{-4}$ | 3.10936213 | 0.938015 |
+| $1.0\times10^{-4}$ | 3.08453423 | 0.798489 |
+| $5.0\times10^{-5}$ | 3.08133807 | 0.103619 |
+| $1.0\times10^{-5}$ | 3.07876510 | 0.083502 |
+| $5.0\times10^{-6}$ | 3.07844246 | 0.010480 |
+| $1.0\times10^{-6}$ | 3.07818418 | 0.008390 |
 
 The results show that reducing the timestep improves numerical accuracy and brings the calculated areal velocity closer to its theoretical value.
 
@@ -156,13 +161,13 @@ The results show that the final simulated position becomes less sensitive to cha
 
 Euler, Runge–Kutta (RK4), and Velocity Verlet methods were compared using position and energy errors.
 
-| Integration Method | Maximum Position Error (%) | Final Position Error (%) | Maximum Energy Error (%) |
-|---|---:|---:|---:|
-| Euler | 0.064760 | 0.064760 | 0.008917 |
-| RK4 | 0.000000 | 0.000000 | 0.000000 |
-| Velocity Verlet | 0.000000 | 0.000000 | 0.000000 |
+| Method | Maximum Position Error (%) | Final Position Error (%) | Maximum Energy Error (%) |
+|:---|---:|---:|---:|
+| Euler | $6.475959\times10^{-2}$ | $6.475959\times10^{-2}$ | $8.916568\times10^{-3}$ |
+| RK4 | $1.319612\times10^{-11}$ | $8.321857\times10^{-12}$ | $5.777441\times10^{-12}$ |
+| Velocity Verlet | $2.199767\times10^{-8}$ | $2.184155\times10^{-8}$ | $1.050000\times10^{-9}$ |
 
-*Note: RK4 and Velocity Verlet errors are rounded to six decimal places.*
+RK4 and Velocity Verlet show substantially lower position and energy errors than the Explicit Euler method under the tested conditions. RK4 produces the smallest errors among the three methods, while Velocity Verlet also demonstrates high numerical accuracy.
 
 ### Validation Using NASA/JPL Horizons Data
 
