@@ -1,4 +1,4 @@
-# Numerical Verification of Kepler’s Second Law
+# Numerical Study of Planetary Motion and Verification of Kepler's Second Law
 
 ## Objective
 
