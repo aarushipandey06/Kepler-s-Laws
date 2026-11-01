@@ -99,8 +99,6 @@ Here, $\(\mathbf r_{\mathrm{sim}}\)$ and $\(\mathbf r_{\mathrm{ref}}\)$ are the 
 - **Validation period:** 360 days
 - **Reference source:** NASA/JPL Horizons
 - **Coordinate system:** Heliocentric Cartesian coordinates
-- **Distance unit:** AU
-- **Velocity unit:** AU/year
 - **Integration method:** Explicit Euler
 - **Timestep:** $10^{-6}$ year
 
