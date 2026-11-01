@@ -163,11 +163,11 @@ The results show that the final simulated position becomes less sensitive to cha
 
 Euler, Runge–Kutta (RK4), and Velocity Verlet methods were compared using position and energy errors.
 
-| Method | Maximum Position Error (%) | Final Position Error (%) | Maximum Energy Error (%) |
-|:---|---:|---:|---:|
-| Euler | $6.475959\times10^{-2}$ | $6.475959\times10^{-2}$ | $8.916568\times10^{-3}$ |
-| RK4 | $1.319612\times10^{-11}$ | $8.321857\times10^{-12}$ | $5.777441\times10^{-12}$ |
-| Velocity Verlet | $2.199767\times10^{-8}$ | $2.184155\times10^{-8}$ | $1.050000\times10^{-9}$ |
+| Method | Max Position Error (%) | Final Position Error (%) | Max Energy Error (%) |
+|---|---:|---:|---:|
+| Euler | 6.475959 × 10⁻² | 6.475959 × 10⁻² | 8.916568 × 10⁻³ |
+| RK4 | 1.319612 × 10⁻¹¹ | 8.321857 × 10⁻¹² | 5.777441 × 10⁻¹² |
+| Velocity Verlet | 2.199767 × 10⁻⁸ | 2.184155 × 10⁻⁸ | 1.050000 × 10⁻⁹ |
 
 RK4 and Velocity Verlet show substantially lower position and energy errors than the Explicit Euler method under the tested conditions. RK4 produces the smallest errors among the three methods, while Velocity Verlet also demonstrates high numerical accuracy.
 
@@ -178,7 +178,7 @@ The simulated Earth trajectory was compared with reference ephemeris data obtain
 | Parameter | Result |
 |---|---:|
 | Integration method | Euler |
-| Timestep | $10^{-6}$ years |
+| Timestep | 10⁻⁶ years |
 | Validation period | 360 days |
 | Final position error | 11.650035% |
 | Final radial error | 0.007723% |
