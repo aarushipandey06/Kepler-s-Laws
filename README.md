@@ -204,6 +204,16 @@ This project uses Explicit Euler method to investigate Kepler’s second law and
 - Matplotlib
 - NASA/JPL Horizons reference data
 
+## How to Run
+
+Open `Kepler's Second Law.ipynb` in Google Colab or Jupyter Notebook.
+
+Install the required libraries using:
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Reproducibility
 
 The simulation notebook and supporting figures are provided in this repository. The initial conditions, timestep, integration method and validation interval should be documented so that the results can be reproduced and independently checked.
