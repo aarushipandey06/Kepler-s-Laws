@@ -10,6 +10,8 @@ Kepler’s second law states that the line joining a planet and the Sun sweeps o
 
 The planet is modelled as a body moving under the gravitational attraction of the Sun. The Sun is assumed to remain fixed at the origin, and the planet’s motion is treated as a two dimensional problem.
 
+![Schematic diagram of the coupled oscillation system](planetary_orbit-2.png)
+
 Using Newton’s law of gravitation, the equations of motion are
 
 $$
